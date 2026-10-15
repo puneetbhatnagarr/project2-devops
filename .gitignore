@@ -1,0 +1,38 @@
+# Secrets - NEVER commit
+*.pem
+*.key
+.env
+.env.local
+credentials
+
+# Terraform state and cache
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+!terraform.tfvars.example
+crash.log
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+.pytest_cache/
+.coverage
+
+# K8s secrets
+k8s/secret.yaml
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
