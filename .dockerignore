@@ -1,0 +1,11 @@
+.git
+.github
+terraform
+ansible
+k8s
+monitoring
+venv
+__pycache__
+*.pem
+*.tfstate
+.DS_Store
