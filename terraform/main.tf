@@ -34,6 +34,15 @@ resource "aws_security_group" "devops_sg" {
     protocol    = "tcp"
     cidr_blocks = [var.my_ip]
   }
+   # We also need to open port 80 for the Kubernetes NodePort later
+  ingress {
+    description = "Kubernetes NodePort"
+    from_port   = 30080
+    to_port     = 30080
+    protocol    = "tcp"
+    cidr_blocks = [var.my_ip]
+  }
+
 
   egress {
     from_port   = 0
@@ -53,6 +62,7 @@ resource "aws_instance" "k8s_node" {
   key_name = var.key_pair_name
   vpc_security_group_ids = [aws_security_group.devops_sg.id]
   associate_public_ip_address = true
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   root_block_device {
     volume_size = 20
