@@ -21,7 +21,7 @@ dynamodb = boto3.resource('dynamodb', region_name='ap-south-1')
 table = dynamodb.Table('StudentData')
 
 # The exact name of our S3 bucket created by Terraform
-BUCKET_NAME = "student-uploads-3d7d6154" 
+BUCKET_NAME = "student-uploads-2ca4b157" 
 
 # =====================================================================
 # 3. THE FRONTEND (HTML & CSS)

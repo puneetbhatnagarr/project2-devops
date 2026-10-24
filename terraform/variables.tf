@@ -11,7 +11,7 @@ variable "aws_region" {
 variable "my_ip" {
   description = "Your public IP with /32"
   type        = string
-  default     = "106.219.167.148/32"
+  default     = "106.219.166.213/32"
 }
 
 variable "instance_type" {
@@ -29,5 +29,5 @@ variable "ami_id" {
 variable "key_pair_name" {
   description = "Name of the EC2 key"
   type        = string
-  default     = "verginia"
+  default     = "devi"
 }
